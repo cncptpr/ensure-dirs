@@ -1,0 +1,16 @@
+[package]
+name = "ensure-dirs"
+version = "0.1.0"
+edition = "2021"
+description = "Ensure directories exist with the configured owner, group and mode"
+license = "MIT"
+
+[dependencies]
+libc = "0.2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+uzers = "0.12"
+
+[profile.release]
+lto = true
+strip = true
